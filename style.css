@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Merriweather", serif;
+}
+
+body{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.328);
+}
+
+#calculator{
+    color: white;
+    position: relative;
+    z-index: 1; 
+    background-color: rgba(128, 128, 128, 0.3);
+    width: 370px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid yellow;
+    animation-name: animation;
+    animation-duration: 1s;
+
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+}
+
+input{
+    display: block;
+    width: calc(100% - 24px);
+    padding: 10px;
+    font-size: 1.5rem;
+    outline: none;
+    border: 2px solid yellow;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(128, 128, 128, 0.634);
+    color: white;
+    border-radius: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    user-select: all;
+}
+
+.btn{
+    font-size: 2rem;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    align-content: center;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid yellow;
+    transition-property: all;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn:hover{
+    background-color: yellow;
+    color: black;
+}
+
+@keyframes animation {
+
+    from{
+        scale: 0.5;
+    }
+
+    to{
+        scale : 1;
+    }
+}
