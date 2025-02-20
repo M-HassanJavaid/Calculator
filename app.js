@@ -6,7 +6,7 @@ btn.forEach((element) => {
     element.addEventListener('click', () => {
         if (element.innerHTML === '=') {
             try {
-                string = string.replace( /X/g , '*' ).replace( /÷/g , '/');
+                string = string.replace( /x/g , '*' ).replace( /÷/g , '/');
                 string = eval(string).toString();
                 input.value = string;
             } catch (error) {
