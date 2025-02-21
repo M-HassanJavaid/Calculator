@@ -20,7 +20,7 @@ btn.forEach((element) => {
             string = string.slice(0 , - 1);
             input.value = string;
         } else if (string.endsWith(')') && !(element.innerHTML === '*') && !(element.innerHTML === '/') && !(element.innerHTML === '-') && !(element.innerHTML === '+')) {
-            string = string + '*' + element.innerHTML;
+            string = string + 'x' + element.innerHTML;
             input.value = string;   
         } else {
             string = string + element.innerHTML;
